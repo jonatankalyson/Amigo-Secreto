@@ -1,6 +1,6 @@
 //O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
 
-// Função para adicionar um amigo à lista
+
 function adicionarAmigo() {
     const inputAmigo = document.getElementById('amigo');
     const nomeAmigo = inputAmigo.value.trim();
@@ -14,17 +14,17 @@ function adicionarAmigo() {
     }
 }
 
-// Função para sortear o amigo secreto
+
 function sortearAmigo() {
     const listaAmigos = document.querySelectorAll('#listaAmigos li');
     const numAmigos = listaAmigos.length;
 
     if (numAmigos > 1) {
         const amigos = Array.from(listaAmigos).map(li => li.textContent);
-        const amigosEmbaralhados = shuffleArray(amigos.slice()); // Embaralha a lista de amigos
+        const amigosEmbaralhados = shuffleArray(amigos.slice()); 
 
         const resultado = document.getElementById('resultado');
-        resultado.textContent = ''; // Limpa o resultado anterior
+        resultado.textContent = ''; 
 
         amigos.forEach((amigo, index) => {
             const sorteado = amigosEmbaralhados[index];
@@ -37,7 +37,6 @@ function sortearAmigo() {
     }
 }
 
-// Função para embaralhar um array (Fisher-Yates shuffle algorithm)
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
